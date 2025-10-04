@@ -11,7 +11,7 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 public class webSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/chat") // point to access the api .... point of entry in the application
+        registry.addEndpoint("/ws-chat") // point to access the api .... point of entry in the application
                 .setAllowedOrigins("http://localhost:8090") //allow reqs from this origin only, security feature
                 .withSockJS(); // compatibility for clients that dont support websockets by using sockjs
         
